@@ -5,6 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git branch: 'main', url: 'https://github.com/mohamed-zakaria-csed/jenkins-demo.git'
+		credentialsId: 'github-pat-for-jenkins'
             }
         }
 
